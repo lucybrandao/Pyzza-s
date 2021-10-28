@@ -1,0 +1,37 @@
+// app global css in SCSS form
+
+.logo {
+    height: 50px;
+    width: 50px;
+}
+
+.coca {
+    width: 12em;
+}
+
+.menu-item:hover {
+    background-color: $secondary;
+    cursor: pointer;
+}
+
+.menu-item-login:hover {
+    background-color: rgba(255, 255, 255, 0.124) !important;
+    cursor: pointer;
+}
+
+.home-img-lg {
+    cursor: pointer;
+}
+
+.home-img-md:hover {
+    cursor: pointer;
+}
+
+.home-img-sm {
+    height: 44.5%;
+    border-radius: 8px;
+}
+
+.home-img-sm:hover {
+    cursor: pointer;
+}
