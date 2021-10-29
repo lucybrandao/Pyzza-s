@@ -2,18 +2,26 @@
   <q-layout view="lHh Lpr lff">
     <q-header elevated>
       <q-toolbar class="justify-center">
-        <q-img :src="logo" class="logo q-mr-md" />
-
-        <div class="menu-item q-px-sm text-uppercase text-bold q-py-lg">Peça Online</div>
-        <div class="menu-item q-px-sm text-uppercase text-bold q-py-lg">Cardápio</div>
-        <div class="menu-item q-px-sm text-uppercase text-bold q-py-lg">Promoções</div>
-        <div class="menu-item q-px-sm text-uppercase text-bold q-py-lg">Lojas</div>
-        <div class="menu-item q-px-sm text-uppercase text-bold q-py-lg">Acompanhe o seu pedido</div>
-        <div class="menu-item-login q-ml-lg text-uppercase text-bold bg-secondary q-py-lg q-px-md">
-          <i class="far fa-user q-mr-sm"></i>Fazer Login
-        </div>
-        <div class="menu-item q-px-md text-uppercase text-bold q-py-lg">
-          <i class="fas fa-shopping-cart q-mr-sm"></i>Carrinho
+        <div class="col-6">
+          <div class="row">
+            <div class="col">
+              <div class="row">
+                <q-img :src="logo" class="logo q-mr-md q-mt-sm" />
+                <div class="menu-item q-px-sm text-uppercase text-bold q-py-lg">Cardápio</div>
+                <!-- <div class="menu-item q-px-sm text-uppercase text-bold q-py-lg">Promoções</div> -->
+              </div>
+            </div>
+            <div class="col">
+              <div class="row justify-end">
+                <div class="menu-item-login q-ml-lg text-uppercase text-bold bg-secondary q-py-lg q-px-md">
+                  <i class="far fa-user q-mr-sm"></i>Fazer Login
+                </div>
+                <div class="menu-item q-px-md text-uppercase text-bold q-py-lg">
+                  <i class="fas fa-shopping-cart q-mr-sm"></i>Carrinho
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </q-toolbar>
     </q-header>
