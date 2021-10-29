@@ -1,26 +1,26 @@
-# Pizza (pizza)
+# Dama's Pyzza
 
 A Quasar Framework app
 
-## Install the dependencies
+## Instalar as dependências
 ```bash
 npm install
 ```
 
-### Start the app in development mode (hot-code reloading, error reporting, etc.)
+### Iniciar modo de desenvolvimento do app (hot-code reloading, error reporting, etc.)
 ```bash
 quasar dev
 ```
 
-### Lint the files
+### Lint nos arquivos
 ```bash
 npm run lint
 ```
 
-### Build the app for production
+### Build da aplicação para produção
 ```bash
 quasar build
 ```
 
-### Customize the configuration
-See [Configuring quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js).
+### Customizar as configurações
+Veja [Configuring quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js).
