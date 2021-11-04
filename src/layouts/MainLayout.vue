@@ -6,8 +6,9 @@
           <div class="row">
             <div class="col">
               <div class="row">
-                <q-img :src="logo" class="logo q-mr-md q-mt-sm" />
-                <div class="menu-item q-px-sm text-uppercase text-bold q-py-lg">Cardápio</div>
+                <q-img :src="logo" @click="toHome()" class="logo q-mr-md q-mt-sm" />
+                <div class="menu-item q-px-sm text-uppercase text-bold q-py-lg" @click="toHome()">Início</div>
+                <div class="menu-item q-px-sm text-uppercase text-bold q-py-lg" @click="toCardapio()">Cardápio</div>
                 <!-- <div class="menu-item q-px-sm text-uppercase text-bold q-py-lg">Promoções</div> -->
               </div>
             </div>
@@ -97,6 +98,15 @@ export default defineComponent({
     return {
       logo: require('src/assets/damas_simbolo.png'),
       coca: require('src/assets/coca.png')
+    }
+  },
+
+  methods: {
+    toCardapio () {
+      this.$router.push({ name: 'cardapio' })
+    },
+    toHome () {
+      this.$router.push({ name: 'home' })
     }
   }
 })

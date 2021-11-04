@@ -23,7 +23,7 @@
         <p class="q-mt-md text-primary text-bold">Este é o nosso cardápio nacional. Para ver os produtos
         disponíveis na sua região,faça o login e insira o seu endereço. Encontre a loja mais próxima.</p>
         <!-- Categorias -->
-        <q-card flat bordered square class="my-card q-my-md bg-grey-1 text-primary">
+        <q-card flat bordered square @click="toPizza()" class="my-card q-my-md bg-grey-1 text-primary">
           <q-card-section horizontal>
             <q-img class="col-2" :src="pizza" />
             <div class="row items-center">
@@ -34,7 +34,7 @@
           </q-card-section>
         </q-card>
 
-        <q-card flat bordered square class="my-card q-my-md bg-grey-1 text-primary">
+        <q-card flat bordered square @click="toSobremesa()" class="my-card q-my-md bg-grey-1 text-primary">
           <q-card-section horizontal>
             <q-img class="col-2" :src="sobremesa" />
             <div class="row items-center">
@@ -45,7 +45,7 @@
           </q-card-section>
         </q-card>
 
-        <q-card flat bordered square class="my-card q-my-md bg-grey-1 text-primary">
+        <q-card flat bordered square @click="toBebida()" class="my-card q-my-md bg-grey-1 text-primary">
           <q-card-section horizontal>
             <q-img class="col-2" :src="bebida" />
             <div class="row items-center">
@@ -72,6 +72,18 @@ export default defineComponent({
       pizza: require('src/assets/cardapio_pizza.png'),
       sobremesa: require('src/assets/cardapio_sobremesa.png'),
       bebida: require('src/assets/cardapio_bebida.png')
+    }
+  },
+
+  methods: {
+    toPizza () {
+      this.$router.push({ name: 'cardapio-pizza-list' })
+    },
+    toSobremesa () {
+      this.$router.push({ name: 'cardapio-sobremesa-list' })
+    },
+    toBebida () {
+      this.$router.push({ name: 'cardapio-bebida-list' })
     }
   }
 })

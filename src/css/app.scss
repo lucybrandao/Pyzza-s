@@ -5,6 +5,10 @@
     width: 50px;
 }
 
+.logo:hover {
+    cursor: pointer;
+}
+
 .coca {
     width: 12em;
 }
@@ -39,4 +43,5 @@
 .my-card:hover {
     cursor: pointer;
     background-color: $primary !important;
+    color: white !important;
 }
