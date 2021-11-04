@@ -2,9 +2,17 @@
 const routes = [
   {
     path: '/',
-    component: () => import('layouts/MainLayout.vue'),
+    component: () => import('layouts/InicioLayout.vue'),
     children: [
       { path: '', component: () => import('pages/Index.vue'), name: 'home' }
+    ]
+  },
+  {
+    path: '/login',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/Login.vue'), name: 'login' },
+      { path: 'cadastro', component: () => import('pages/Cadastro.vue'), name: 'cadastro' }
     ]
   },
   {
