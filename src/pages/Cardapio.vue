@@ -23,38 +23,18 @@
         <p class="q-mt-md text-primary text-bold">Este é o nosso cardápio nacional. Para ver os produtos
         disponíveis na sua região,faça o login e insira o seu endereço. Encontre a loja mais próxima.</p>
         <!-- Categorias -->
-        <q-card flat bordered square @click="toPizza()" class="my-card q-my-md bg-grey-1 text-primary">
-          <q-card-section horizontal>
-            <q-img class="col-2" :src="pizza" />
-            <div class="row items-center">
-              <div class="col">
-                <div class="text-h5 text-bold text-uppercase q-pl-md">Pizzas</div>
+        <div v-for="(categoria, index) in categorias" :key="index">
+          <q-card flat bordered square @click="to(categoria.to)" class="my-card q-my-md bg-grey-1 text-primary">
+            <q-card-section horizontal>
+              <q-img class="col-2" :src="categoria.img" />
+              <div class="row items-center">
+                <div class="col">
+                  <div class="text-h5 text-bold text-uppercase q-pl-md">{{ categoria.nome }}</div>
+                </div>
               </div>
-            </div>
-          </q-card-section>
-        </q-card>
-
-        <q-card flat bordered square @click="toSobremesa()" class="my-card q-my-md bg-grey-1 text-primary">
-          <q-card-section horizontal>
-            <q-img class="col-2" :src="sobremesa" />
-            <div class="row items-center">
-              <div class="col">
-                <div class="text-h5 text-bold text-uppercase q-pl-md">Sobremesas</div>
-              </div>
-            </div>
-          </q-card-section>
-        </q-card>
-
-        <q-card flat bordered square @click="toBebida()" class="my-card q-my-md bg-grey-1 text-primary">
-          <q-card-section horizontal>
-            <q-img class="col-2" :src="bebida" />
-            <div class="row items-center">
-              <div class="col">
-                <div class="text-h5 text-bold text-uppercase q-pl-md">Bebidas</div>
-              </div>
-            </div>
-          </q-card-section>
-        </q-card>
+            </q-card-section>
+          </q-card>
+        </div>
 
       </div>
     </div>
@@ -69,21 +49,32 @@ export default defineComponent({
 
   setup () {
     return {
-      pizza: require('src/assets/cardapio_pizza.png'),
-      sobremesa: require('src/assets/cardapio_sobremesa.png'),
-      bebida: require('src/assets/cardapio_bebida.png')
+      categorias: [
+        {
+          value: 1,
+          nome: 'Pizzas',
+          img: require('src/assets/cardapio_pizza.png'),
+          to: 'cardapio-pizza-list'
+        },
+        {
+          value: 2,
+          nome: 'Sobremesas',
+          img: require('src/assets/cardapio_sobremesa.png'),
+          to: 'cardapio-sobremesa-list'
+        },
+        {
+          value: 3,
+          nome: 'Bebidas',
+          img: require('src/assets/cardapio_bebida.png'),
+          to: 'cardapio-bebida-list'
+        }
+      ]
     }
   },
 
   methods: {
-    toPizza () {
-      this.$router.push({ name: 'cardapio-pizza-list' })
-    },
-    toSobremesa () {
-      this.$router.push({ name: 'cardapio-sobremesa-list' })
-    },
-    toBebida () {
-      this.$router.push({ name: 'cardapio-bebida-list' })
+    to (categoria) {
+      this.$router.push({ name: categoria })
     }
   }
 })
