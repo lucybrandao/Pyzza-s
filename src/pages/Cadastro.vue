@@ -23,17 +23,31 @@
           >
             <q-input
               filled
-              v-model="name"
+              v-model="nome"
               label="Nome"
               hint="Nome e Sobrenome"
               lazy-rules
               :rules="[ val => val && val.length > 0 || 'Por favor, escreva algo']"
             />
 
+            <q-input filled v-model="nascimento" hint="Data de nascimento" mask="date" :rules="['date']">
+              <template v-slot:append>
+                <q-icon name="event" class="cursor-pointer">
+                  <q-popup-proxy ref="qDateProxy" transition-show="scale" transition-hide="scale">
+                    <q-date v-model="nascimento">
+                      <div class="row items-center justify-end">
+                        <q-btn v-close-popup label="Close" color="primary" flat />
+                      </div>
+                    </q-date>
+                  </q-popup-proxy>
+                </q-icon>
+              </template>
+            </q-input>
+
             <q-input
               filled
               type="password"
-              v-model="age"
+              v-model="senha"
               label="Senha"
               hint="Pelo menos 4 dígitos"
               lazy-rules
@@ -63,12 +77,14 @@ export default defineComponent({
   setup () {
     const $q = useQuasar()
 
-    const name = ref(null)
-    const age = ref(null)
+    const nome = ref(null)
+    const nascimento = ref(null)
+    const senha = ref(null)
     const accept = ref(false)
     return {
-      name,
-      age,
+      nome,
+      nascimento: ref('1998/04/11'),
+      senha,
       accept,
 
       onSubmit () {
@@ -90,8 +106,9 @@ export default defineComponent({
       },
 
       onReset () {
-        name.value = null
-        age.value = null
+        nome.value = null
+        nascimento.value = null
+        senha.value = null
         accept.value = false
       }
     }
