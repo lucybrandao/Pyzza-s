@@ -25,6 +25,13 @@ const routes = [
       { path: 'bebidas', component: () => import('pages/Bebidas.vue'), name: 'cardapio-bebida-list' }
     ]
   },
+  {
+    path: '/carrinho',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/Carrinho.vue'), name: 'carrinho' }
+    ]
+  },
 
   // Always leave this as last one,
   // but you can also remove it

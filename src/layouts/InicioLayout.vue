@@ -16,7 +16,7 @@
                 <div class="menu-item-login q-ml-lg text-uppercase text-bold bg-secondary q-py-lg q-px-md" @click="toLogin()">
                   <i class="far fa-user q-mr-sm"></i>Fazer Login
                 </div>
-                <div class="menu-item q-px-md text-uppercase text-bold q-py-lg">
+                <div class="menu-item q-px-md text-uppercase text-bold q-py-lg" @click="toCarrinho()">
                   <i class="fas fa-shopping-cart q-mr-sm"></i>Carrinho
                 </div>
               </div>
@@ -109,6 +109,9 @@ export default defineComponent({
     },
     toLogin () {
       this.$router.push({ name: 'login' })
+    },
+    toCarrinho () {
+      this.$router.push({ name: 'carrinho' })
     }
   }
 })
