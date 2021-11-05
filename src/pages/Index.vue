@@ -3,7 +3,7 @@
     <div class="row justify-center">
       <div class="col-6">
         <!-- Começar pedido -->
-        <div class="row items-center justify-between">
+        <div class="row items-center justify-between" style="margin-top: -18px">
           <div class="text-h1 text-blue-grey-1">—</div>
           <div class="text-h5 text-bold text-primary text-uppercase">Começar pedido</div>
           <q-btn flat class="bg-negative text-white text-bold q-px-xl q-py-sm" @click="toCardapio()">Entrega</q-btn>

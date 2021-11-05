@@ -96,7 +96,7 @@ export default defineComponent({
 
   setup () {
     return {
-      logo: require('src/assets/damas_simbolo.png'),
+      logo: require('src/assets/logo_py.png'),
       coca: require('src/assets/coca.png')
     }
   },
