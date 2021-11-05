@@ -26,7 +26,7 @@
           <q-card-section horizontal>
             <div class="row items-center">
               <div class="col">
-                <div class="text-h6 text-bold text-uppercase q-pl-md">Sobremesas</div>
+                <div class="text-h6 text-bold text-uppercase q-pl-md">Início / Cardápio / Sobremesas</div>
               </div>
             </div>
           </q-card-section>

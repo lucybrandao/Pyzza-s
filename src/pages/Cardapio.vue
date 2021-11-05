@@ -22,6 +22,17 @@
         <!-- Texto -->
         <p class="q-mt-md text-primary text-bold">Este é o nosso cardápio nacional. Para ver os produtos
         disponíveis na sua região,faça o login e insira o seu endereço. Encontre a loja mais próxima.</p>
+
+        <q-card flat bordered square class="q-mt-md bg-primary text-white">
+          <q-card-section horizontal>
+            <div class="row items-center">
+              <div class="col">
+                <div class="text-h6 text-bold text-uppercase q-pl-md">Início / Cardápio</div>
+              </div>
+            </div>
+          </q-card-section>
+        </q-card>
+
         <!-- Categorias -->
         <div v-for="(categoria, index) in categorias" :key="index">
           <q-card flat bordered square @click="to(categoria.to)" class="my-card q-my-md bg-grey-1 text-primary">
