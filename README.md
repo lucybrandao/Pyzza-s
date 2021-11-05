@@ -1,4 +1,4 @@
-# Dama's Pyzza
+# Pyzza's
 
 A Quasar Framework app
 
