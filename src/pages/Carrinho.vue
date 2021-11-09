@@ -36,7 +36,10 @@
 
         <q-card flat bordered square class="q-my-md bg-grey-1 text-primary">
           <q-card-section>
-            <div class="text-h4">Carrinho</div>
+            <div class="row justify-between">
+              <div class="text-h4">Carrinho</div>
+              <q-btn label="Fechar Pedido" color="primary" class="aligh-right q-px-xl" />
+            </div>
           </q-card-section>
           <q-separator inset />
           <q-card-section v-for="(pedido, index) in pedidos" :key="index" horizontal style="border-bottom: 1px solid #0000001f" class="q-mx-md">
@@ -62,12 +65,6 @@
             <div class="text-h6">Subtotal (<span>{{ pedidos.length }}</span> itens): <span class="text-bold">R$ 114,50</span></div>
           </q-card-section>
         </q-card>
-
-        <div class="row">
-          <div class="col text-right">
-            <q-btn label="Fechar Pedido" color="primary" class="aligh-right q-px-xl" />
-          </div>
-        </div>
 
       </div>
     </div>
