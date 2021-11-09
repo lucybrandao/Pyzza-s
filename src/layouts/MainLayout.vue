@@ -7,7 +7,6 @@
             <div class="col">
               <div class="row">
                 <q-img :src="logo" @click="toHome()" class="logo q-mr-md q-mt-sm" />
-                <div class="menu-item q-px-sm text-uppercase text-bold q-py-lg" @click="toHome()">Início</div>
                 <div class="menu-item q-px-sm text-uppercase text-bold q-py-lg" @click="toCardapio()">Cardápio</div>
                 <!-- <div class="menu-item q-px-sm text-uppercase text-bold q-py-lg">Promoções</div> -->
               </div>
