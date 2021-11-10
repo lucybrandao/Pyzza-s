@@ -45,3 +45,8 @@
     background-color: $primary !important;
     color: white !important;
 }
+
+.footer-link:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}

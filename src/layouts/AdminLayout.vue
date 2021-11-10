@@ -1,40 +1,76 @@
 <template>
-  <q-layout view="lHh Lpr lff">
-    <q-header elevated>
-      <q-toolbar class="justify-center">
-        <div class="col-6">
-          <div class="row">
-            <div class="col">
-              <div class="row">
-                <q-img :src="logo" @click="toHome()" class="logo q-mr-md q-mt-sm" />
-                <div class="menu-item q-px-sm text-uppercase text-bold q-py-lg" @click="toCardapio()">Cardápio</div>
-                <!-- <div class="menu-item q-px-sm text-uppercase text-bold q-py-lg">Promoções</div> -->
-              </div>
-            </div>
-            <div class="col">
-              <div class="row justify-end">
-                <div class="menu-item-login q-ml-lg text-uppercase text-bold bg-secondary q-py-lg q-px-md" @click="toLogin()">
-                  <i class="far fa-user q-mr-sm"></i>Fazer Login
-                </div>
-                <div class="menu-item q-px-md text-uppercase text-bold q-py-lg" @click="toCarrinho()">
-                  <i class="fas fa-shopping-cart q-mr-sm"></i>Carrinho
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+  <q-layout view="lHh LpR lff">
+
+    <q-header elevated class="bg-secondary text-white">
+      <q-toolbar>
+        <q-btn dense flat round icon="menu" @click="toggleLeftDrawer" />
+
+        <q-toolbar-title>
+          Pyzza's
+        </q-toolbar-title>
       </q-toolbar>
     </q-header>
+
+    <q-drawer
+      v-model="leftDrawerOpen"
+      show-if-above
+      :width="250"
+      :breakpoint="400"
+    >
+      <q-scroll-area style="height: calc(100% - 150px); margin-top: 150px; border-right: 1px solid #ddd">
+        <q-list padding>
+          <q-item clickable v-ripple @click="toDash">
+            <q-item-section>
+              Dashboards
+            </q-item-section>
+          </q-item>
+
+          <q-item clickable v-ripple @click="toPizzas">
+            <q-item-section>
+              Pizzas
+            </q-item-section>
+          </q-item>
+
+          <q-item clickable v-ripple @click="toSobremesas">
+            <q-item-section>
+              Sobremesas
+            </q-item-section>
+          </q-item>
+
+          <q-item clickable v-ripple @click="toBebidas">
+            <q-item-section>
+              Bebidas
+            </q-item-section>
+          </q-item>
+
+          <q-item clickable v-ripple @click="toUsuarios">
+            <q-item-section>
+              Usuários
+            </q-item-section>
+          </q-item>
+        </q-list>
+      </q-scroll-area>
+
+      <div class="absolute-top bg-primary text-white" style="height: 150px">
+        <div class="absolute-bottom bg-transparent q-pa-md">
+          <q-avatar size="56px" class="q-mb-sm">
+            <img :src="logo">
+          </q-avatar>
+          <div class="text-weight-bold">Usuário Abacateiro</div>
+          <div>Cargo do Usuário</div>
+        </div>
+      </div>
+    </q-drawer>
 
     <q-page-container>
       <router-view />
     </q-page-container>
 
     <q-footer class="bg-grey-4">
-      <q-toolbar class="justify-center q-py-xl">
-        <div class="col-6">
+      <q-toolbar class="justify-center q-pt-lg q-pb-md">
+        <div class="col-10">
           <div class="row justify-between">
-            <div class="text-bold text-grey-9 q-px-md footer-link" @click="toAdmin">Entrar como Funcionário</div>
+            <div class="text-bold text-grey-9 q-px-md footer-link" @click="toHome">Voltar ao site</div>
             <div class="text-bold text-grey-9 q-px-md">Sobre a Pyzza</div>
             <div class="text-bold text-grey-9 q-px-md">Políticas de Privacidade</div>
             <div class="text-bold text-grey-9 q-px-md">Seja um Franqueado</div>
@@ -44,8 +80,8 @@
         </div>
       </q-toolbar>
 
-      <q-toolbar class="justify-center q-pb-xl">
-        <div class="col-6">
+      <q-toolbar class="justify-center q-pb-md">
+        <div class="col-10">
           <div class="row items-center">
             <div class="text-bold text-primary text-h5 q-px-md"><i class="fab fa-facebook-f"></i></div>
             <div class="text-bold text-primary text-h5 q-px-md"><i class="fab fa-twitter"></i></div>
@@ -56,7 +92,7 @@
       </q-toolbar>
 
       <q-toolbar class="justify-center q-pb-lg">
-        <div class="col-6">
+        <div class="col-10">
           <div class="row items-center">
             <p class="text-bold text-grey-6">Serviço disponível nas áreas de entrega Dama'a Pizza, todos os dias,
             de acordo com o horário de funcionamento de cada loja. A Dama'a Pizza Brasil
@@ -84,38 +120,48 @@
         </div>
       </q-toolbar>
     </q-footer>
+
   </q-layout>
 </template>
 
 <script>
-import { defineComponent } from 'vue'
+import { ref } from 'vue'
 
-export default defineComponent({
-  name: 'MainLayout',
+export default {
+  name: 'AdminLayout',
 
   setup () {
+    const leftDrawerOpen = ref(false)
+
     return {
       logo: require('src/assets/logo_py.png'),
-      coca: require('src/assets/coca.png')
+      coca: require('src/assets/coca.png'),
+      leftDrawerOpen,
+      toggleLeftDrawer () {
+        leftDrawerOpen.value = !leftDrawerOpen.value
+      }
     }
   },
 
   methods: {
-    toCardapio () {
-      this.$router.push({ name: 'cardapio' })
-    },
     toHome () {
       this.$router.push({ name: 'home' })
     },
-    toLogin () {
-      this.$router.push({ name: 'login' })
-    },
-    toCarrinho () {
-      this.$router.push({ name: 'carrinho' })
-    },
-    toAdmin () {
+    toDash () {
       this.$router.push({ name: 'admin-dashboard' })
+    },
+    toPizzas () {
+      this.$router.push({ name: 'pizza-list' })
+    },
+    toSobremesas () {
+      this.$router.push({ name: 'sobremesa-list' })
+    },
+    toBebidas () {
+      this.$router.push({ name: 'bebida-list' })
+    },
+    toUsuarios () {
+      this.$router.push({ name: 'usuario-list' })
     }
   }
-})
+}
 </script>
