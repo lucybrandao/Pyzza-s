@@ -3,25 +3,6 @@
     <div class="row justify-center">
       <div class="col col-md-10 col-lg-6 q-mb-lg">
         <!-- Começar pedido -->
-        <q-card flat class="my-card bg-primary text-white">
-          <q-card-section>
-            <div class="row items-center">
-              <div class="col col-lg-6 text-center">
-                <div class="text-h5 text-bold text-uppercase">Começar o Pedido</div>
-              </div>
-              <div class="col col-lg-6">
-                <div class="row justify-around items-center">
-                  <q-btn flat class="bg-negative text-white text-bold q-px-xl q-py-sm">Entrega</q-btn>
-                  <div class="text-h6 text-bold text-blue-grey-4 text-italic">ou</div>
-                  <q-btn flat class="bg-negative text-white text-bold q-px-xl q-py-sm">Retirar na Loja</q-btn>
-                </div>
-              </div>
-            </div>
-          </q-card-section>
-        </q-card>
-        <!-- Texto -->
-        <p class="q-mt-md text-primary text-bold">Este é o nosso cardápio nacional. Para ver os produtos
-        disponíveis na sua região,faça o login e insira o seu endereço. Encontre a loja mais próxima.</p>
         <q-breadcrumbs
           class="bg-primary q-pb-sm q-px-md q-mt-sm text-uppercase text-bold text-white"
           active-color="info"
@@ -30,8 +11,17 @@
           <q-breadcrumbs-el label="Cardápio" :to="{ name: 'cardapio' }" />
           <q-breadcrumbs-el label="Bebidas" />
         </q-breadcrumbs>
+
+        <!-- Texto -->
+        <div class="row">
+          <div class="col col-lg-10">
+            <p class="q-mt-md text-primary">Este é o nosso cardápio nacional. Para ver os produtos
+            disponíveis na sua região,faça o login e insira o seu endereço. Encontre a loja mais próxima.</p>
+          </div>
+        </div>
+
         <!-- Pizzas -->
-        <div class="row q-my-sm">
+        <div class="row">
           <div v-for="(bebida, index) in bebidas" :key="index" class="col-4 q-pa-sm">
             <q-img :src="bebida.img" />
             <q-btn flat class="full-width bg-negative text-white text-bold q-py-sm q-my-sm">Adicionar ao Carrinho</q-btn>
