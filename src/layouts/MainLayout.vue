@@ -31,7 +31,7 @@
     </q-page-container>
 
     <q-footer class="bg-grey-4">
-      <q-toolbar class="justify-center q-py-xl">
+      <q-toolbar class="justify-center q-pt-xl q-pb-md">
         <div class="col col-md-10 col-lg-6">
           <div class="row justify-between">
             <div class="text-bold text-grey-9 footer-link" @click="toHome">Voltar ao site</div>
@@ -43,7 +43,7 @@
         </div>
       </q-toolbar>
 
-      <q-toolbar class="justify-center q-pb-xl">
+      <q-toolbar class="justify-center q-pb-lg">
         <div class="col col-md-10 col-lg-6">
           <div class="row items-center">
             <div class="text-bold text-primary text-h5 q-pr-md"><i class="fab fa-facebook-f"></i></div>
