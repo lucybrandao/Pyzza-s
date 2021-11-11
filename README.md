@@ -2,6 +2,10 @@
 
 A Quasar Framework app
 
+## Pré-requisitos
+
+* ter o Quasar CLI instalado globalmente (https://quasar.dev/quasar-cli/installation)
+
 ## Instalar as dependências
 ```bash
 npm install
