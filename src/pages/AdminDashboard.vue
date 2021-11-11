@@ -3,6 +3,10 @@
     <div class="row justify-center">
       <div class="col">
         <!-- Começar pedido -->
+        <q-breadcrumbs class="bg-grey-3 q-pb-sm q-px-md q-mt-sm">
+          <q-breadcrumbs-el label="Site" />
+          <q-breadcrumbs-el label="Admin" />
+        </q-breadcrumbs>
         <div class="text-h2 text-secondary q-my-md">Dashboards</div>
         <div class="row q-gutter-md">
           <q-card @click="toPizzas" class="dash-card col-3 bg-red-10 text-white">

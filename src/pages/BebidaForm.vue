@@ -3,7 +3,13 @@
     <div class="row justify-center">
       <div class="col">
         <!-- Começar pedido -->
-        <div class="text-h2 text-secondary q-ml-lg q-mt-md">Form Bebida</div>
+        <q-breadcrumbs class="bg-grey-3 q-pb-sm q-px-md q-mt-sm">
+          <q-breadcrumbs-el label="Site" />
+          <q-breadcrumbs-el label="Admin" />
+          <q-breadcrumbs-el label="Listagem de Bebidas" />
+          <q-breadcrumbs-el label="Form de Bebida" />
+        </q-breadcrumbs>
+        <div class="text-h2 text-secondary q-my-md">Form Bebida</div>
       </div>
     </div>
   </q-page>

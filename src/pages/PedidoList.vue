@@ -3,6 +3,11 @@
     <div class="row justify-center">
       <div class="col">
         <!-- Começar pedido -->
+        <q-breadcrumbs class="bg-grey-3 q-pb-sm q-px-md q-mt-sm">
+          <q-breadcrumbs-el label="Site" />
+          <q-breadcrumbs-el label="Admin" />
+          <q-breadcrumbs-el label="Listagem de Pedidos" />
+        </q-breadcrumbs>
         <div class="text-h2 text-secondary q-my-md">Listagem de Pedidos</div>
         <q-table
           title="Pedidos"
