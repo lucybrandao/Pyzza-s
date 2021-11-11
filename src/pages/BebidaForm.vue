@@ -10,29 +10,49 @@
           <q-breadcrumbs-el label="Form de Bebida" />
         </q-breadcrumbs>
         <div class="text-h2 text-secondary q-my-md">Form Bebida</div>
+        <q-card>
+          <q-card-section>
+            <div class="row q-mb-md">
+              <q-input outlined v-model="text" label="Nome" class="col-3" />
+            </div>
+            <div class="row q-my-md">
+              <q-input outlined v-model="text" label="Preço" class="col-2" />
+            </div>
+            <div class="row q-mt-md">
+              <q-input outlined v-model="text" label="Quantidade (ml)" class="col-2" />
+            </div>
+            <div class="row q-gutter-md q-mt-sm">
+              <q-btn outline color="primary" label="Voltar" :to="{ name: 'bebida-list' }" />
+              <q-btn color="positive" label="Salvar" @click="salvar()" />
+            </div>
+          </q-card-section>
+        </q-card>
       </div>
     </div>
   </q-page>
 </template>
 
 <script>
-import { defineComponent } from 'vue'
+import { useQuasar } from 'quasar'
+import { defineComponent, ref } from 'vue'
 
 export default defineComponent({
   name: 'bebida-form',
 
   setup () {
-    return {
-      img1: require('src/assets/img1.png'),
-      img2: require('src/assets/img2.png'),
-      img3: require('src/assets/img3.png'),
-      img4: require('src/assets/img4.jpg')
-    }
-  },
+    const $q = useQuasar()
 
-  methods: {
-    toCardapio () {
-      this.$router.push({ name: 'cardapio' })
+    return {
+      text: ref(''),
+      salvar () {
+        $q.notify({
+          color: 'green-4',
+          textColor: 'white',
+          icon: 'cloud_done',
+          message: 'Bebida salva com sucesso'
+        })
+        this.$router.push({ name: 'bebida-list' })
+      }
     }
   }
 })

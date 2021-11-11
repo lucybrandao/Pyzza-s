@@ -54,15 +54,6 @@ export default defineComponent({
         this.$router.push({ name: 'pizza-list' })
       }
     }
-  },
-
-  methods: {
-    toCardapio () {
-      this.$router.push({ name: 'cardapio' })
-    },
-    toHome () {
-      this.$router.push({ name: 'home' })
-    }
   }
 })
 </script>

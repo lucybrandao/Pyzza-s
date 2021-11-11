@@ -10,29 +10,49 @@
           <q-breadcrumbs-el label="Form de Usuário" />
         </q-breadcrumbs>
         <div class="text-h2 text-secondary q-my-md">Form do Usuário</div>
+        <q-card>
+          <q-card-section>
+            <div class="row q-mb-md">
+              <q-input outlined v-model="text" label="Nome Completo" class="col-3" />
+            </div>
+            <div class="row q-my-md">
+              <q-input outlined v-model="text" label="Data de Nascimento" class="col-2" />
+            </div>
+            <div class="row q-mt-md">
+              <q-input outlined v-model="text" label="Cargo" class="col-2" />
+            </div>
+            <div class="row q-gutter-md q-mt-sm">
+              <q-btn outline color="primary" label="Voltar" :to="{ name: 'usuario-list' }" />
+              <q-btn color="positive" label="Salvar" @click="salvar()" />
+            </div>
+          </q-card-section>
+        </q-card>
       </div>
     </div>
   </q-page>
 </template>
 
 <script>
-import { defineComponent } from 'vue'
+import { useQuasar } from 'quasar'
+import { defineComponent, ref } from 'vue'
 
 export default defineComponent({
   name: 'usuario-form',
 
   setup () {
-    return {
-      img1: require('src/assets/img1.png'),
-      img2: require('src/assets/img2.png'),
-      img3: require('src/assets/img3.png'),
-      img4: require('src/assets/img4.jpg')
-    }
-  },
+    const $q = useQuasar()
 
-  methods: {
-    toCardapio () {
-      this.$router.push({ name: 'cardapio' })
+    return {
+      text: ref(''),
+      salvar () {
+        $q.notify({
+          color: 'green-4',
+          textColor: 'white',
+          icon: 'cloud_done',
+          message: 'Usuário salvo com sucesso'
+        })
+        this.$router.push({ name: 'usuario-list' })
+      }
     }
   }
 })
