@@ -5,7 +5,7 @@
         <!-- Começar pedido -->
         <div class="row items-bottom justify-between">
           <div class="text-h2 text-secondary q-my-md">Listagem de Bebidas</div>
-          <q-btn color="positive" class="q-mt-auto q-mb-lg" label="Cadastrar Bebida" />
+          <q-btn @click="toForm" color="positive" class="q-mt-auto q-mb-lg" label="Cadastrar Bebida" />
         </div>
         <q-table
           title="Bebidas"
@@ -111,6 +111,9 @@ export default defineComponent({
   methods: {
     toCardapio () {
       this.$router.push({ name: 'cardapio' })
+    },
+    toForm () {
+      this.$router.push({ name: 'bebida-form' })
     }
   }
 })
