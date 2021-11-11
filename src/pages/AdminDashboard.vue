@@ -5,25 +5,25 @@
         <!-- Começar pedido -->
         <div class="text-h2 text-secondary q-my-md">Dashboards</div>
         <div class="row q-gutter-md">
-          <q-card class="col-3 bg-red-10 text-white">
+          <q-card @click="toPizzas" class="dash-card col-3 bg-red-10 text-white">
             <q-card-section>
               <div class="text-h6">Pizzas</div>
               <div class="text-subtitle2">Total de Pizzas cadastradas: 7</div>
             </q-card-section>
           </q-card>
-          <q-card class="col-3 bg-primary text-white">
+          <q-card @click="toBabidas" class="dash-card col-3 bg-primary text-white">
             <q-card-section>
               <div class="text-h6">Bebidas</div>
               <div class="text-subtitle2">Total de Bebidas cadastradas: 7</div>
             </q-card-section>
           </q-card>
-          <q-card class="col-3 bg-purple-9 text-white">
+          <q-card @click="toSobremesas" class="dash-card col-3 bg-purple-9 text-white">
             <q-card-section>
               <div class="text-h6">Sobremesas</div>
               <div class="text-subtitle2">Total de Sobremesas cadastradas: 7</div>
             </q-card-section>
           </q-card>
-          <q-card class="col-3 bg-orange-9 text-white">
+          <q-card @click="toPedidos" class="dash-card col-3 bg-orange-9 text-white">
             <q-card-section>
               <div class="text-h6">Pedidos</div>
               <div class="text-subtitle2">Total de Pedidos cadastradas: 7</div>
@@ -176,8 +176,17 @@ export default defineComponent({
   },
 
   methods: {
-    toCardapio () {
-      this.$router.push({ name: 'cardapio' })
+    toPizzas () {
+      this.$router.push({ name: 'pizza-list' })
+    },
+    toBabidas () {
+      this.$router.push({ name: 'bebida-list' })
+    },
+    toSobremesas () {
+      this.$router.push({ name: 'sobremesa-list' })
+    },
+    toPedidos () {
+      this.$router.push({ name: 'pedido-list' })
     }
   }
 })
