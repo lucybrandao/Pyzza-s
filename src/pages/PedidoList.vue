@@ -4,7 +4,7 @@
       <div class="col">
         <!-- Começar pedido -->
         <q-breadcrumbs class="bg-grey-3 q-pb-sm q-px-md q-mt-sm">
-          <q-breadcrumbs-el label="Site" :to="{ name: 'home' }" />
+          <q-breadcrumbs-el label="Início" :to="{ name: 'home' }" />
           <q-breadcrumbs-el label="Admin" :to="{ name: 'admin-dashboard' }" />
           <q-breadcrumbs-el label="Listagem de Pedidos" />
         </q-breadcrumbs>
@@ -28,7 +28,7 @@ const columns = [
   {
     nome: 'value',
     required: true,
-    label: '#Pedido',
+    label: '#',
     align: 'left',
     field: row => row.value,
     format: val => `${val}`,

@@ -34,7 +34,7 @@
       <q-toolbar class="justify-center q-pt-xl q-pb-md">
         <div class="col col-md-10 col-lg-6">
           <div class="row justify-between">
-            <div class="text-bold text-grey-9 footer-link" @click="toHome">Voltar ao site</div>
+            <div class="text-bold text-grey-9 footer-link" @click="toAdmin">Entrar como funcionário</div>
             <div class="text-bold text-grey-9">Sobre a Pyzza</div>
             <div class="text-bold text-grey-9">Políticas de Privacidade</div>
             <div class="text-bold text-grey-9">Cardápio</div>

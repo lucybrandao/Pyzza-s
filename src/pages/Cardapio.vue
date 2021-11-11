@@ -21,7 +21,7 @@
 
         <!-- Categorias -->
         <div v-for="(categoria, index) in categorias" :key="index">
-          <q-card flat bordered square @click="to(categoria.to)" class="my-card bg-grey-1 text-primary">
+          <q-card flat bordered square @click="to(categoria.to)" class="my-card bg-grey-1 q-my-sm text-primary">
             <q-card-section horizontal>
               <q-img class="col-2" :src="categoria.img" />
               <div class="row items-center">
