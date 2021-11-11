@@ -4,7 +4,8 @@ A Quasar Framework app
 
 ## Pré-requisitos
 
-* ter o Quasar CLI instalado globalmente (https://quasar.dev/quasar-cli/installation)
+* Ter o Quasar CLI instalado globalmente (https://quasar.dev/quasar-cli/installation);
+* Gostar de pizza.
 
 ## Instalar as dependências
 ```bash
