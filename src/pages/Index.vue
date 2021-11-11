@@ -1,7 +1,7 @@
 <template>
   <q-page class="q-pa-md q-mb-lg">
     <div class="row justify-center">
-      <div class="col-6">
+      <div class="col col-md-10 col-lg-6">
         <!-- Começar pedido -->
         <div class="row items-center justify-between" style="margin-top: -18px">
           <div class="text-h1 text-blue-grey-1">—</div>

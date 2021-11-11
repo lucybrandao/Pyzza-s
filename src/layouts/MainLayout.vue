@@ -2,7 +2,7 @@
   <q-layout view="lHh Lpr lff">
     <q-header elevated>
       <q-toolbar class="justify-center">
-        <div class="col-6">
+        <div class="col col-md-10 col-lg-6">
           <div class="row">
             <div class="col">
               <div class="row">
