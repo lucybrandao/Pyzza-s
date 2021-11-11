@@ -3,7 +3,10 @@
     <div class="row justify-center">
       <div class="col">
         <!-- Começar pedido -->
-        <div class="text-h2 text-secondary q-my-md">Listagem de Pizzas</div>
+        <div class="row items-bottom justify-between">
+          <div class="text-h2 text-secondary q-my-md">Listagem de Pizzas</div>
+          <q-btn color="positive" class="q-mt-auto q-mb-lg" label="Cadastrar Pizza" />
+        </div>
         <q-table
           title="Pizzas"
           :rows="rows"

@@ -3,7 +3,10 @@
     <div class="row justify-center">
       <div class="col">
         <!-- Começar pedido -->
-        <div class="text-h2 text-secondary q-my-md">Listagem de Usuários</div>
+        <div class="row items-bottom justify-between">
+          <div class="text-h2 text-secondary q-my-md">Listagem de Usuários</div>
+          <q-btn color="positive" class="q-mt-auto q-mb-lg" label="Cadastrar Usuário" />
+        </div>
         <q-table
           title="Usuários"
           :rows="rows"
