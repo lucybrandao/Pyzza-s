@@ -58,15 +58,15 @@
       <q-toolbar class="justify-center q-pb-lg">
         <div class="col-6">
           <div class="row items-center">
-            <p class="text-bold text-grey-6">Serviço disponível nas áreas de entrega Dama'a Pizza, todos os dias,
-            de acordo com o horário de funcionamento de cada loja. A Dama'a Pizza Brasil
+            <p class="text-bold text-grey-6">Serviço disponível nas áreas de entrega Pyzza's, todos os dias,
+            de acordo com o horário de funcionamento de cada loja. A Pyzza's Brasil
             se reserva o direito de alterar ou encerrar as ofertas sem aviso prévio.
             Todas as promoções expostas não são cumulativas entre si ou com outras promoções
             e descontos. Cobramos taxa de entrega. Todos os nossos produtos CONTÉM GLÚTEN.
             Alérgicos: todos os nossos produtos contém ou podem conter traços de Trigo,
             Ovos, Leite e Soja. As formas de pagamento variam de acordo com cada loja.
             Imagens meramente ilustrativas. Consulte se sua loja de preferência pratica a
-            promoção escolhida Em caso de dúvidas, consulte nosso SAC:<span class="text-primary">sac@damas.com.br</span>.</p>
+            promoção escolhida Em caso de dúvidas, consulte nosso SAC:<span class="text-primary">sac@pyzzas.com.br</span>.</p>
 
             <p class="text-bold text-grey-6">*Preços "a partir de" podem sofrer pequenas variações
             de acordo com a região da loja. Confirme o preço no carrinho de compras antes de confirmar seu pedido.</p>
@@ -75,10 +75,10 @@
             Barra da Tijuca, Rio de Janeiro/RJ - 22640-100</p>
 
             <p class="text-bold text-grey-6">S.A.C: Dúvidas, reclamações, sugestões e / ou
-            elogios envie um e-mail para: <span class="text-primary">sac@damas.com.br</span></p>
+            elogios envie um e-mail para: <span class="text-primary">sac@pyzzas.com.br</span></p>
 
             <p class="text-bold text-grey-6">Informações sobre o uso de dados pessoais e pedidos de
-            descadastro do banco de dados, envie um e-mail para: <span class="text-primary">encarregadodados@damas.com.br</span> –
+            descadastro do banco de dados, envie um e-mail para: <span class="text-primary">encarregadodados@pyzzas.com.br</span> –
             Encarregado de Dados - Lucy Brandão</p>
           </div>
         </div>
