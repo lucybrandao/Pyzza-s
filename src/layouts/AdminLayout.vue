@@ -80,22 +80,21 @@
 
     <q-footer class="bg-grey-4">
       <q-toolbar class="justify-center q-pt-lg q-pb-md">
-        <div class="col-10">
+        <div class="col col-lg-10">
           <div class="row justify-between">
-            <div class="text-bold text-grey-9 q-px-md footer-link" @click="toHome">Voltar ao site</div>
-            <div class="text-bold text-grey-9 q-px-md">Sobre a Pyzza</div>
-            <div class="text-bold text-grey-9 q-px-md">Políticas de Privacidade</div>
-            <div class="text-bold text-grey-9 q-px-md">Seja um Franqueado</div>
-            <div class="text-bold text-grey-9 q-px-md">Fale Conosco</div>
-            <div class="text-bold text-grey-9 q-px-md">Termos de Uso</div>
+            <div class="text-bold text-grey-9 footer-link" @click="toHome">Voltar ao site</div>
+            <div class="text-bold text-grey-9">Sobre a Pyzza</div>
+            <div class="text-bold text-grey-9">Políticas de Privacidade</div>
+            <div class="text-bold text-grey-9">Cardápio</div>
+            <div class="text-bold text-grey-9">Fale Conosco</div>
           </div>
         </div>
       </q-toolbar>
 
       <q-toolbar class="justify-center q-pb-md">
-        <div class="col-10">
+        <div class="col col-lg-10">
           <div class="row items-center">
-            <div class="text-bold text-primary text-h5 q-px-md"><i class="fab fa-facebook-f"></i></div>
+            <div class="text-bold text-primary text-h5 q-pr-md"><i class="fab fa-facebook-f"></i></div>
             <div class="text-bold text-primary text-h5 q-px-md"><i class="fab fa-twitter"></i></div>
             <div class="text-bold text-primary text-h5 q-px-md q-mr-xl"><i class="fab fa-instagram"></i></div>
             <q-img :src="coca" class="coca q-mr-md" />
@@ -104,7 +103,7 @@
       </q-toolbar>
 
       <q-toolbar class="justify-center q-pb-lg">
-        <div class="col-10">
+        <div class="col col-lg-10">
           <div class="row items-center">
             <p class="text-bold text-grey-6">Serviço disponível nas áreas de entrega Pyzza's, todos os dias,
             de acordo com o horário de funcionamento de cada loja. A Pyzza's Brasil
