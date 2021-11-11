@@ -10,23 +10,49 @@
           <q-breadcrumbs-el label="Form de Pizza" />
         </q-breadcrumbs>
         <div class="text-h2 text-secondary q-my-md">Form da Pizza</div>
+        <q-card>
+          <q-card-section>
+            <div class="row q-mb-md">
+              <q-input outlined v-model="text" label="Sabor" class="col-3" />
+            </div>
+            <div class="row q-my-md">
+              <q-input outlined v-model="text" label="Preço" class="col-2" />
+            </div>
+            <div class="row q-mt-md">
+              <q-input outlined v-model="text" label="Ingredientes" class="col-5" />
+            </div>
+            <div class="row q-gutter-md q-mt-sm">
+              <q-btn outline color="primary" label="Voltar" :to="{ name: 'pizza-list' }" />
+              <q-btn color="positive" label="Salvar" @click="salvar()" />
+            </div>
+          </q-card-section>
+        </q-card>
       </div>
     </div>
   </q-page>
 </template>
 
 <script>
-import { defineComponent } from 'vue'
+import { useQuasar } from 'quasar'
+import { defineComponent, ref } from 'vue'
 
 export default defineComponent({
   name: 'pizza-form',
 
   setup () {
+    const $q = useQuasar()
+
     return {
-      img1: require('src/assets/img1.png'),
-      img2: require('src/assets/img2.png'),
-      img3: require('src/assets/img3.png'),
-      img4: require('src/assets/img4.jpg')
+      text: ref(''),
+      salvar () {
+        $q.notify({
+          color: 'green-4',
+          textColor: 'white',
+          icon: 'cloud_done',
+          message: 'Pizza salva com sucesso'
+        })
+        this.$router.push({ name: 'pizza-list' })
+      }
     }
   },
 
