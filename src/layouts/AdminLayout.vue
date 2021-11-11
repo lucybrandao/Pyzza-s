@@ -54,6 +54,12 @@
               Usuários
             </q-item-section>
           </q-item>
+
+          <q-item clickable v-ripple @click="logout">
+            <q-item-section>
+              Sair
+            </q-item-section>
+          </q-item>
         </q-list>
       </q-scroll-area>
 
@@ -170,6 +176,9 @@ export default {
     },
     toPedidos () {
       this.$router.push({ name: 'pedido-list' })
+    },
+    logout () {
+      this.$router.push({ name: 'home' })
     }
   }
 }
