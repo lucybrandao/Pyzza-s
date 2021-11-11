@@ -22,15 +22,14 @@
         <!-- Texto -->
         <p class="q-mt-md text-primary text-bold">Este é o nosso cardápio nacional. Para ver os produtos
         disponíveis na sua região,faça o login e insira o seu endereço. Encontre a loja mais próxima.</p>
-        <q-card flat bordered square class="q-mt-md bg-primary text-white">
-          <q-card-section horizontal>
-            <div class="row items-center">
-              <div class="col">
-                <div class="text-h6 text-bold text-uppercase q-pl-md">Início / Cardápio / Bebidas</div>
-              </div>
-            </div>
-          </q-card-section>
-        </q-card>
+        <q-breadcrumbs
+          class="bg-primary q-pb-sm q-px-md q-mt-sm text-uppercase text-bold text-white"
+          active-color="info"
+        >
+          <q-breadcrumbs-el label="Início" :to="{ name: 'home' }" />
+          <q-breadcrumbs-el label="Cardápio" :to="{ name: 'cardapio' }" />
+          <q-breadcrumbs-el label="Bebidas" />
+        </q-breadcrumbs>
         <!-- Pizzas -->
         <div class="row q-my-sm">
           <div v-for="(bebida, index) in bebidas" :key="index" class="col-4 q-pa-sm">
