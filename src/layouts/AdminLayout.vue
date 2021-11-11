@@ -25,6 +25,12 @@
             </q-item-section>
           </q-item>
 
+          <q-item clickable v-ripple @click="toPedidos">
+            <q-item-section>
+              Pedidos
+            </q-item-section>
+          </q-item>
+
           <q-item clickable v-ripple @click="toPizzas">
             <q-item-section>
               Pizzas
@@ -161,6 +167,9 @@ export default {
     },
     toUsuarios () {
       this.$router.push({ name: 'usuario-list' })
+    },
+    toPedidos () {
+      this.$router.push({ name: 'pedido-list' })
     }
   }
 }

@@ -40,6 +40,14 @@ const routes = [
     ]
   },
   {
+    path: '/admin/pedidos',
+    component: () => import('layouts/AdminLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/PedidoList.vue'), name: 'pedido-list' },
+      { path: 'detalhe', component: () => import('pages/PedidoDetail.vue'), name: 'pedido-detail' }
+    ]
+  },
+  {
     path: '/admin/usuarios',
     component: () => import('layouts/AdminLayout.vue'),
     children: [
