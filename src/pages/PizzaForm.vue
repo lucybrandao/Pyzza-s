@@ -4,9 +4,9 @@
       <div class="col">
         <!-- Começar pedido -->
         <q-breadcrumbs class="bg-grey-3 q-pb-sm q-px-md q-mt-sm">
-          <q-breadcrumbs-el label="Site" />
-          <q-breadcrumbs-el label="Admin" />
-          <q-breadcrumbs-el label="Listagem de Pizzas" />
+          <q-breadcrumbs-el label="Site" :to="{ name: 'home' }" />
+          <q-breadcrumbs-el label="Admin" :to="{ name: 'admin-dashboard' }" />
+          <q-breadcrumbs-el label="Listagem de Pizzas" :to="{ name: 'pizza-list' }" />
           <q-breadcrumbs-el label="Form de Pizza" />
         </q-breadcrumbs>
         <div class="text-h2 text-secondary q-my-md">Form da Pizza</div>
@@ -33,6 +33,9 @@ export default defineComponent({
   methods: {
     toCardapio () {
       this.$router.push({ name: 'cardapio' })
+    },
+    toHome () {
+      this.$router.push({ name: 'home' })
     }
   }
 })

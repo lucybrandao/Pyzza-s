@@ -4,8 +4,8 @@
       <div class="col">
         <!-- Começar pedido -->
         <q-breadcrumbs class="bg-grey-3 q-pb-sm q-px-md q-mt-sm">
-          <q-breadcrumbs-el label="Site" />
-          <q-breadcrumbs-el label="Admin" />
+          <q-breadcrumbs-el label="Site" :to="{ name: 'home' }" />
+          <q-breadcrumbs-el label="Admin" :to="{ name: 'admin-dashboard' }" />
           <q-breadcrumbs-el label="Listagem de Usuários" />
         </q-breadcrumbs>
         <div class="row items-bottom justify-between">
