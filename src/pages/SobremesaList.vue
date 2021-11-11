@@ -1,5 +1,5 @@
 <template>
-  <q-page class="q-pa-md q-mb-lg">
+  <q-page class="q-pa-md">
     <div class="row justify-center">
       <div class="col">
         <!-- Começar pedido -->

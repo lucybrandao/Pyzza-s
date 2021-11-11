@@ -1,9 +1,16 @@
 <template>
-  <q-page class="q-pa-md q-mb-lg">
+  <q-page class="q-pa-md">
     <div class="row justify-center">
       <div class="col">
         <!-- Começar pedido -->
-        <div class="text-h2 text-secondary q-ml-lg q-mt-md">Listagem de Usuários</div>
+        <div class="text-h2 text-secondary q-my-md">Listagem de Usuários</div>
+        <q-table
+          title="Usuários"
+          :rows="rows"
+          :columns="columns"
+          row-key="value"
+          class="q-mt-lg"
+        />
       </div>
     </div>
   </q-page>
@@ -12,15 +19,58 @@
 <script>
 import { defineComponent } from 'vue'
 
+const columns = [
+  {
+    nome: 'nome',
+    required: true,
+    label: 'Nome',
+    align: 'left',
+    field: row => row.nome,
+    format: val => `${val}`,
+    sortable: true
+  },
+  {
+    nome: 'cargo',
+    align: 'left',
+    label: 'Cargo',
+    field: 'cargo'
+  },
+  {
+    nome: 'signo',
+    label: 'Signo',
+    field: 'signo',
+    sortable: true
+  }
+]
+
+const rows = [
+  {
+    value: 1,
+    nome: 'Fulaninho da Silva',
+    cargo: 'Dono',
+    signo: 'Aries'
+  },
+  {
+    value: 2,
+    nome: 'Siclaninho dos Santos',
+    cargo: 'Pyzzaiolo',
+    signo: 'Gêmeos'
+  },
+  {
+    value: 3,
+    nome: 'Beltraninho com Sobrenome',
+    cargo: 'Garçom',
+    signo: 'Escorpião'
+  }
+]
+
 export default defineComponent({
   name: 'usuario-list',
 
   setup () {
     return {
-      img1: require('src/assets/img1.png'),
-      img2: require('src/assets/img2.png'),
-      img3: require('src/assets/img3.png'),
-      img4: require('src/assets/img4.jpg')
+      columns,
+      rows
     }
   },
 
