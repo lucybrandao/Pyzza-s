@@ -1,4 +1,4 @@
-# Pyzza's
+# Pyzza's :pizza: (🇧🇷)
 
 A Quasar Framework app
 
